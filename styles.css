@@ -1,0 +1,145 @@
+/* تنسيق عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* إعدادات الخطوط والألوان الأساسية */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+    background-color: #000; /* لون الخلفية الأسود */
+}
+
+/* شريط التنقل */
+header {
+    background-color: #000; /* خلفية سوداء */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky; /* يجعل القائمة ثابتة */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* للسماح بترتيب العناصر بشكل مناسب على الشاشات الصغيرة */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* تأثير الأخضر عند التحريك */
+nav a:hover {
+    background-color: #4caf50; /* تأثير الأخضر عند التحريك */
+    transform: scale(1.1); /* تأثير التكبير عند التحريك */
+}
+
+/* تأثير الأخضر عند التحريك لاسم الموقع */
+header h1 {
+    color: #4caf50; /* اللون الأخضر الثابت لاسم الموقع */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header h1:hover {
+    transform: scale(1.1); /* تأثير التكبير عند التحريك */
+}
+
+/* الأقسام */
+section {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.hero {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #ff784e;
+    transform: scale(1.1); /* تأثير التكبير */
+}
+
+/* تصميم الصفحة العامة الأخرى */
+h2 {
+    color: #fff;
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* تأثيرات الاستجابة لأحجام الشاشات */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+}
